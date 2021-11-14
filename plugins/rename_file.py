@@ -36,7 +36,7 @@ from PIL import Image
 from database.database import *
 from database.db import *
 
-@Mai_bOTs.on_message(pyrogram.filters.command(["scaption"]))
+@OP_Bots.on_message(pyrogram.filters.command(["scaption"]))
 async def set_caption(bot, update):
     if len(update.command) == 1:
         await update.reply_text(
@@ -59,7 +59,7 @@ async def set_caption(bot, update):
         await update.reply_text(f"**--Your Caption--:**\n\n{CSTM_FIL_CPTN}", quote=True)
 
 
-@Mai_bOTs.on_message(pyrogram.filters.command(["rename"]))
+@OP_Bots.on_message(pyrogram.filters.command(["rename"]))
 async def rename_doc(bot, update):
     update_channel = Config.UPDATE_CHANNEL
     if update_channel:
